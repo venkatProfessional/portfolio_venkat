@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "bayon-regular";
+  src: url('../public/fonts/Bayon-Regular.ttf');
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* colors */
+  --color-white: #fff;
+  --bg-black: #000;
+  --color-violet:#B336FF;
+
+
+  /* font family */
+  --font-bayon: "bayon-regular";
+
+
+  /* font-size */
+  --pf-fs-100: 80px
+  
+}
+
+@media(max-width: 1200px){
+  :root{
+  --pf-fs-100: 50px
+    
+  } 
+}
+@media(max-width: 767px){
+  :root{
+    --pf-fs-100: 50px
+  }
+}
+* {
+  background-color: var(--color-white);
+  color: var(--bg-black);
+  font-family:  var(--font-bayon);
+
+}
+
+
+
+.name-text {
+  font-size: var(--pf-fs-100);
+
+}
+
+
+.bw-image {
+  padding-top: 50px;
+  border-radius:60%;
+}
+
+.color-violet{
+  color: var(--color-violet);
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+.tabs-wrapper button{
+ background-color: #000;
+ border: none;
+ color: #B336FF;
+ font-size: 20px;
+
+} 
+
+.tabs-wrapper button:hover{
+  background-color: #000;
+  border: none;
+  color: #B336FF;
+  font-size: 20px;
+ 
+ } 
+
+ .dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  /* display: inline-block; */
+  position: absolute;
+}
+
+.line
+{
+
+  position: absolute;
+  border-left: 1px solid #B336FF;
+  height: calc(100% );
+  left: 25px;
+  top: 20px;
+}
+
+
+.icons ul>li{
+  font-size: 100px;
+}
+
+.contact-btn>button{
+  background-color: #000;
+  color: white;
+}
+
+.contact-btn>button:hover{
+  background-color:#fff;
+  color: black;
+  border: 1px solid black;
+}
