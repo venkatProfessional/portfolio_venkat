@@ -46,7 +46,7 @@ const Internship = () => {
                 and a deeper understanding of [industry or field].
               </p>
             
-              <h1>Intern at senchola technology solutions</h1>
+              <h1>Intern at senchola  solutions</h1>
 
               
               <p>
