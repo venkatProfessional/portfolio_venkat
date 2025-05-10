@@ -28,7 +28,7 @@ const Internship = () => {
         <Container className=" py-5">
           <Row className=" justify-content-between  ">
             <Col lg={8}>
-            <h1>Intern at sai technologies</h1>
+            <h1>Intern at sai </h1>
               <p>
                 During my internship, I had the opportunity to work with a
                 talented team at Sai Technologies, where I gained hands-on
@@ -46,7 +46,7 @@ const Internship = () => {
                 and a deeper understanding of [industry or field].
               </p>
             
-              <h1>Intern at senchola  solutions</h1>
+              <h1>Intern at senchola tech  solutions</h1>
 
               
               <p>

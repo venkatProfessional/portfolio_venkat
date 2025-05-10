@@ -33,7 +33,7 @@ const Contactme = () => {
             </div>
 
             <div className=" d-flex  mt-5 opacity-25"> 
-            &copy; 2024  Venkat Portfolio 
+            &copy; 2025  Venkat Portfolio 
 
             </div>
           </Col>
