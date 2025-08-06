@@ -56,19 +56,19 @@ const ComponentBanner = () => {
               I AM <span className="color-violet">JOTHI VENKAT</span>
             </p>
             <p>
-               I'm a passionate fresher with a solid foundation
-              in HTML5, CSS3, JavaScript and React. This knowledge forms the
-              cornerstone of my journey into web development. Eager to delve
-              into modern frameworks like React.js, I'm keen on mastering the
-              tools that drive today's dynamic web applications. My goal is to
-              create not just functional but also aesthetically pleasing
-              websites that users love to interact with. I'm dedicated to
-              staying updated with the latest web technologies, ensuring that I
-              remain at the forefront of this ever-evolving field. With a
-              proactive approach to learning, I embrace challenges as
-              opportunities to grow and refine my skills. My ultimate aim is to
-              contribute meaningfully to the digital world by building
-              innovative and user-centric web solutions.
+              I'm a passionate fresher with a strong foundation in software
+              testing, familiar with both manual and automated testing
+              practices. My experience includes working with testing tools such
+              as Selenium and Postman, and I am proficient in writing and
+              maintaining test cases, debugging, and reporting defects. My goal
+              is to ensure the delivery of high-quality software products by
+              identifying and addressing issues early in the development
+              process. With a commitment to continuous learning, I stay updated
+              on testing methodologies and strive to contribute to robust and
+              user-focused digital solutions. I view every challenge as a
+              valuable opportunity to improve my analytical and technical skills
+              and am dedicated to playing a proactive role in any software
+              quality assurance team.
             </p>
             {/* <div className=" d-flex justify-content-end gap-2">
                <p>resume</p>

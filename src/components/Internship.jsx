@@ -6,66 +6,48 @@ const Internship = () => {
   const internship = [
     {
       imgUrl: "/public/assets/certificate-images/intern-senchola.png",
-      title: "Intern Senchola",
-      description: "Description for Intern Senchola",
-    },
-    {
-      imgUrl: "/public/assets/certificate-images/sai-experience.png",
-      title: "Sai Experience",
-      description: "Description for Sai Experience",
-    },
-    {
-      imgUrl: "/public/assets/certificate-images/udemy-css.jpg",
-      title: "Udemy CSS",
-      description: "Description for Udemy CSS",
+      title: "Internship Trainee, Smiligence (Mar 2025 – July 2025)",
+      description: `
+Projects: Human Resource Management Portal
+• Worked on the HRM portal focused on modules like employee check-in/check-out, attendance tracking, and leave management.
+• Gained practical experience in both manual and automation testing, contributing to overall product stability and quality.
+• Participated in manual testing, verified functionality, and validated to support QA efforts.
+• Collaborated with business analysts and QA teams to identify, track, and resolve defects during development and UAT phases.
+• Developed and executed basic automation scripts using Selenium WebDriver to streamline repetitive test scenarios, improve regression test coverage, and reduce manual effort.
+• Actively participated in daily stand-up meetings and sprint reviews to align on bug fixes, testing outcomes, and deployment readiness.
+      `
     },
   ];
 
   return (
-    <section id="experience">
+    <section id="experience" className="fs-10">
       <div>
-        <h1 className=" text-center "> Experience</h1>
-        <Container className=" py-5">
-          <Row className=" justify-content-between  ">
+        <h1 className="text-center heading_color">Experience</h1>
+        <Container className="py-1">
+          <Row className="justify-content-between">
             <Col lg={8}>
-            <h1>Intern at sai technologies</h1>
-              <p>
-                During my internship, I had the opportunity to work with a
-                talented team at Sai Technologies, where I gained hands-on
-                experience in FrontendDevelopment. I was involved
-                in a project called Cohortz, which helped me develop my
-                skills in  web development. This experience not only enhanced my technical
-                abilities but also improved my collaboration and communication
-                skills.
-              </p>
-              <p>
-                One of the highlights was [mention a significant achievement or
-                learning moment], which taught me the importance of [mention a
-                key lesson learned]. Overall, this internship was a pivotal step
-                in my professional journey, providing me with valuable insights
-                and a deeper understanding of [industry or field].
-              </p>
-            
-              <h1>Intern at senchola  solutions</h1>
+              {internship.map((item, index) => {
+                // Split "Projects: ..." and make "Projects" bold
+                const descriptionLines = item.description.trim().split("\n");
+                const modifiedLines = descriptionLines.map((line, i) => {
+                  if (line.startsWith("Projects:")) {
+                    return (
+                      <p key={i}>
+                        <strong>{line.split(":")[0]}:</strong>
+                        {line.split(":")[1]}
+                      </p>
+                    );
+                  }
+                  return <p key={i}>{line}</p>;
+                });
 
-              
-              <p>
-                During my internship, I had the opportunity to work with a
-                talented team at [Company Name], where I gained hands-on
-                experience in [specific skills or technologies]. I was involved
-                in [describe projects or tasks], which helped me develop my
-                skills in [mention relevant skills, e.g., web development, data
-                analysis, etc.]. This experience not only enhanced my technical
-                abilities but also improved my collaboration and communication
-                skills.
-              </p>
-              <p>
-                One of the highlights was [mention a significant achievement or
-                learning moment], which taught me the importance of [mention a
-                key lesson learned]. Overall, this internship was a pivotal step
-                in my professional journey, providing me with valuable insights
-                and a deeper understanding of [industry or field].
-              </p>
+                return (
+                  <div key={index} className="mb-5">
+                    <h3>{item.title}</h3>
+                    {modifiedLines}
+                  </div>
+                );
+              })}
             </Col>
 
             <Col lg={4}>
@@ -74,8 +56,8 @@ const Internship = () => {
                   <Carousel.Item key={index}>
                     <img
                       src={item.imgUrl}
-                      alt="img"
-                      className=" img-fluid  min-vh-100   p-5"
+                      alt={item.title}
+                      className="img-fluid p-4"
                     />
                   </Carousel.Item>
                 ))}

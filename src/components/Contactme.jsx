@@ -11,7 +11,7 @@ const Contactme = () => {
     <div>
          <section id="contact">
       <Container>
-        <h1 className=" d-flex justify-content-center">Contact me</h1>
+        <h1 className=" d-flex justify-content-center heading_color" >Contact me</h1>
         <p className=" text-center">Just Write a Message</p>
 
         <Row>
@@ -25,7 +25,7 @@ const Contactme = () => {
 
             <div className=" d-flex gap-3">
               <MdEmail />
-            <p style={{textTransform:"none"}}>erjothivenkat2002@gmail.com</p>
+            <p style={{textTransform:"none"}} className="normal-case">erjothivenkat2002@gmail.com</p>
             </div>
             <div className=" d-flex gap-3">
               <IoLocation />
@@ -45,7 +45,7 @@ const Contactme = () => {
              <input type="text" name="name" placeholder="Email" className=" w-100 mt-3" />
           <label htmlFor="message" className=" bg-white text-black mt-3"></label>
              <input type="text" name="message" placeholder="message" className=" w-100 mt-3" />
-             <div className=" d-flex justify-content-end bg-white mt-4 contact-btn">
+             <div className=" d-flex justify-content-end mt-4 contact-btn">
              <Button type="submit">Submit</Button>
 
              </div>
