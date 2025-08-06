@@ -25,7 +25,7 @@ const Contactme = () => {
 
             <div className=" d-flex gap-3">
               <MdEmail />
-              <p>erjothivenkat2002@gmail.com</p>
+            <p style={{textTransform:"none"}}>erjothivenkat2002@gmail.com</p>
             </div>
             <div className=" d-flex gap-3">
               <IoLocation />
@@ -38,12 +38,12 @@ const Contactme = () => {
             </div>
           </Col>
 
-          <Col lg={8} className=" bg-white mb-4 pb-4">
-          <label htmlFor="name" className=" bg-white text-black mt-3">Name</label>
+          <Col lg={8} className="  mb-4 pb-4 mt-2 d-flex flex-column  justify-content-evenly">
+          <label htmlFor="name" className=" bg-white text-black mt-3"></label>
              <input type="text" name="name" placeholder="name" className=" w-100 mt-3" />
-          <label htmlFor="email" className=" bg-white text-black mt-3">Email</label>
+          <label htmlFor="email" className=" bg-white text-black mt-3"></label>
              <input type="text" name="name" placeholder="Email" className=" w-100 mt-3" />
-          <label htmlFor="message" className=" bg-white text-black mt-3">Message</label>
+          <label htmlFor="message" className=" bg-white text-black mt-3"></label>
              <input type="text" name="message" placeholder="message" className=" w-100 mt-3" />
              <div className=" d-flex justify-content-end bg-white mt-4 contact-btn">
              <Button type="submit">Submit</Button>
