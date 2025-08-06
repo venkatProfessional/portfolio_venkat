@@ -19,7 +19,7 @@ const Navs = () => {
       <Container>
         <Navbar.Brand href="#">Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className="collapse-color">
+        <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="m-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#qualification">Qualification</Nav.Link>

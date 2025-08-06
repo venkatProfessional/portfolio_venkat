@@ -186,6 +186,7 @@ bg-white {
 
 span.navbar-toggler-icon {
    background: var(--color-violet) !important;
+   border: none;
   border-radius: 100%;
 }
 
@@ -201,4 +202,9 @@ span.navbar-toggler-icon {
 
 .swal2-white-text {
   color: white !important;
+}
+
+.navbar-toggler {
+      color: var(--text-default) !important;
+      background: var(--text-default) !important;
 }
