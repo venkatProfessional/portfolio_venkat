@@ -4,23 +4,66 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { IoLocation } from "react-icons/io5";
 import { useForm } from "react-hook-form";
+import Swal from 'sweetalert2';
 
 const Contactme = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const onSubmit = async (data) => {
-    const response = await fetch("https://formspree.io/f/your_form_id", {
+const onSubmit = async (data) => {
+  try {
+    const response = await fetch("https://formspree.io/f/xbjnqjap", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
 
     if (response.ok) {
-      alert("Message sent successfully!");
+      Swal.fire({
+        toast: true,
+        position: "top-end",
+        icon: "success",
+        title: "Thank you! We’ll get back to you soon.",
+        customClass: {
+          popup: 'swal2-success-toast',
+          title: 'swal2-white-text'
+        },
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
     } else {
-      alert("Failed to send message.");
+      Swal.fire({
+        toast: true,
+        position: "top-end",
+        icon: "error",
+        title: "Failed to send message. Please try again.",
+        customClass: {
+          popup: 'swal2-error-toast',
+          title: 'swal2-white-text'
+        },
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
     }
-  };
+  } catch (error) {
+    Swal.fire({
+      toast: true,
+      position: "top-end",
+      icon: "error",
+      title: "An error occurred. Please try again.",
+      customClass: {
+        popup: 'swal2-error-toast',
+        title: 'swal2-white-text'
+      },
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+    });
+  }
+};
+
+
 
   return (
     <div>

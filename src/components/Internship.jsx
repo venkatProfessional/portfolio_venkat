@@ -5,7 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 const Internship = () => {
   const internship = [
     {
-      imgUrl: "/public/assets/certificate-images/intern-senchola.png",
+    imgUrl: "/assets/certificate-images/intern-senchola.png",
       title: "Internship Trainee, Smiligence (Mar 2025 – July 2025)",
       description: `
 Projects: Human Resource Management Portal

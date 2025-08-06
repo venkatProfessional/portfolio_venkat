@@ -62,6 +62,13 @@ html {
   :root{
     --pf-fs-100: 50px
   }
+  .tabs-wrapper button{
+ background-color: #000;
+ border: none;
+ color: #B336FF;
+ font-size: 12px !important;
+
+} 
 }
 * {
   background-color: var(--text-default);
@@ -173,4 +180,25 @@ button.btn {
 bg-white {
     --bs-bg-opacity: 1;
     background-color: none !important;
+}
+
+
+
+span.navbar-toggler-icon {
+   background: var(--color-violet) !important;
+  border-radius: 100%;
+}
+
+.swal2-success-toast {
+  background: var(--color-violet) !important; /* Violet */
+  color: white !important;
+}
+
+.swal2-error-toast {
+  background-color: #ff0033 !important; /* Red */
+  color: white !important;
+}
+
+.swal2-white-text {
+  color: white !important;
 }

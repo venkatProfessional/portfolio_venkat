@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import bwImage from "../../public/assets/bwimage.jpg";
 import lightBulb from "../../public/assets/light bulb.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ComponentBanner = () => {
   const [showimg, setShowimg] = useState(false);
+
+     useEffect(() => {
+    Aos.init({ once: true });
+  }, []);
+
 
   const handleChangelightmode = () => {
     setShowimg(!showimg);
@@ -37,12 +44,19 @@ const ComponentBanner = () => {
                 xs={12}
                 className=" order-1 order-md-2 d-flex justify-content-center"
               >
-                <img
+               <div >
+                 <img
+                
                   src={lightBulb}
                   alt="Light bulb"
                   className="img-fluid"
                   onClick={handleChangelightmode}
+                data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="3000"
+                  
                 />
+               </div>
               </Col>
             </Row>
           </Col>

@@ -7,6 +7,7 @@ import {
   FaGitAlt,
   FaGithub,
   FaJava,
+  FaJs,
   FaLaptopCode,
   FaNetworkWired,
   FaPuzzlePiece,
@@ -18,6 +19,7 @@ import {
 } from "react-icons/fa";
 import {
   SiJenkins,
+  SiJira,
   SiPostman,
   SiPytest,
   SiReadthedocs,
@@ -38,10 +40,10 @@ const Technologies = () => {
       label: "Automation Testing",
       icon: <FaRobot size={80} title="Automation Testing" />,
     },
-    {
-      label: "Functional Testing",
-      icon: <FaCogs size={80} title="Functional Testing" />,
-    },
+    // {
+    //   label: "Functional Testing",
+    //   icon: <FaCogs size={80} title="Functional Testing" />,
+    // },
     {
       label: "Regression Testing",
       icon: <FaVial size={80} title="Regression Testing" />,
@@ -99,26 +101,37 @@ const Technologies = () => {
   ];
 
   const techSkills = [
-  { label: "Java", icon: <FaJava size={100} title="Java" /> },
-  { label: "Python", icon: <FaPython size={100} title="Python" /> },
-  { label: "Selenium WebDriver", icon: <SiSelenium size={100} title="Selenium WebDriver" /> },
-  { label: "Pytest", icon: <SiPytest size={100} title="Pytest" /> },
-  { label: "TestNG", icon: <SiTestcafe size={100} title="TestNG" /> },
-  { label: "Postman", icon: <SiPostman size={100} title="Postman" /> },
-  { label: "CI/CD (Jenkins)", icon: <SiJenkins size={100} title="CI/CD (Jenkins)" /> },
-  { label: "Git", icon: <FaGitAlt size={100} title="Git" /> },
-  { label: "GitHub", icon: <FaGithub size={100} title="GitHub" /> },
-  { label: "Documentation", icon: <SiReadthedocs size={100} title="Documentation" /> },
-];
+    { label: "Java", icon: <FaJava size={100} title="Java" /> },
+    { label: "Python", icon: <FaPython size={100} title="Python" /> },
+    {
+      label: "Selenium WebDriver",
+      icon: <SiSelenium size={100} title="Selenium WebDriver" />,
+    },
+    { label: "Pytest", icon: <SiPytest size={100} title="Pytest" /> },
+    { label: "TestNG", icon: <SiTestcafe size={100} title="TestNG" /> },
+    { label: "Postman", icon: <SiPostman size={100} title="Postman" /> },
+    {
+      label: "CI/CD (Jenkins)",
+      icon: <SiJenkins size={100} title="CI/CD (Jenkins)" />,
+    },
+    { label: "Git", icon: <FaGitAlt size={100} title="Git" /> },
+    { label: "GitHub", icon: <FaGithub size={100} title="GitHub" /> },
+    {
+      label: "Documentation",
+      icon: <SiReadthedocs size={100} title="Documentation" />,
+    },
+    { label: "JavaScript", icon: <FaJs size={100} title="JavaScript" /> },
+    { label: "JIRA", icon: <SiJira size={100} title="JIRA" /> },
+  ];
 
   return (
     <section id="qualification">
       <Container>
-        <div className="d-flex tabs-wrapper">
+        <div className="d-flex flex-nowrap overflow-auto tabs-wrapper justify-content-center mt-5  ">
           {tabs.map((val, index) => (
-            <div key={index} className="mt-5">
+            <div key={index} className="flex-shrink-0">
               <button
-                className="btn mx-5"
+                className="btn mx-2"
                 onClick={() => handleIndexClick(index)}
                 style={{
                   borderBottom:
@@ -142,12 +155,18 @@ const Technologies = () => {
                   sm={1}
                   xs={1}
                   className="position-relative mb-4"
+                   data-aos="fade-right"
+                    data-aos-offset="300"
+                    // data-aos-easing="ease-in-sine"
                 >
                   <span className="dot"></span>
                   <span className="line"></span>
                 </Col>
                 <Col lg={8} md={8} sm={8} xs={8}>
-                  <div className="trajectory_content">
+                  <div
+                    className="trajectory_content"
+                   
+                  >
                     <h1>{val.course}</h1>
                     <p>{val.instituteName}</p>
                     <p>{val.CGPA}</p>
@@ -158,46 +177,49 @@ const Technologies = () => {
                 </Col>
               </Row>
             ))}
-{clickedIndex === 1 && (
-  <>
-    {/* Skill List */}
-    <ul className="d-flex justify-content-between flex-wrap">
-      {techSkills.map((skill, index) => (
-        <li key={index}>{skill.label}</li>
-      ))}
-    </ul>
+          {clickedIndex === 1 && (
+            <>
+              {/* Skill List */}
+              <ul className="row  m-0 p-0  text-center ">
+                {techSkills.map((skill, index) => (
+                  <li key={index} className=" col-sm-6 col-md-4 mb-3">
+                    {skill.label}
+                  </li>
+                ))}
+              </ul>
 
-    {/* Icon List */}
-    <div className="icons">
-      <ul className="list-unstyled d-flex justify-content-evenly flex-wrap my-5">
-        {techSkills.map((skill, index) => (
-          <li key={index}>{skill.icon}</li>
-        ))}
-      </ul>
-    </div>
-  </>
-)}
+              {/* Icon List */}
+              <div className="icons">
+                <ul className="list-unstyled d-flex justify-content-evenly flex-wrap my-5">
+                  {techSkills.map((skill, index) => (
+                    <li key={index}>{skill.icon}</li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          )}
 
-       {clickedIndex === 2 && (
-  <>
-    {/* types of testing */}
-   <ul className="d-flex flex-wrap justify-content-center gap-5">
-  {typesOfTesting.map((skill, index) => (
-    <li key={index}>{skill.label}</li>
-  ))}
-</ul>
+          {clickedIndex === 2 && (
+            <>
+              {/* types of testing */}
+              <ul className="row  m-0 p-0  text-center ">
+                {typesOfTesting.map((skill, index) => (
+                  <li key={index} className=" col-sm-6 col-md-4 mb-3">
+                    {skill.label}
+                  </li>
+                ))}
+              </ul>
 
-    {/* Icon List */}
-    <div className="icons">
-      <ul className="list-unstyled d-flex justify-content-evenly flex-wrap my-5">
-        {typesOfTesting.map((skill, index) => (
-          <li key={index}>{skill.icon}</li>
-        ))}
-      </ul>
-    </div>
-  </>
-)}
-
+              {/* Icon List */}
+              <div className="icons">
+                <ul className="list-unstyled d-flex justify-content-evenly flex-wrap my-5">
+                  {typesOfTesting.map((skill, index) => (
+                    <li key={index}>{skill.icon}</li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          )}
         </div>
       </Container>
     </section>
