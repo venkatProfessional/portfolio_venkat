@@ -5,7 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 const Internship = () => {
   const internship = [
     {
-    imgUrl: "/assets/certificate-images/intern-senchola.png",
+      imgUrl: "assets\\certificate-images\\udemy_selenium.jpg",
       title: "Internship Trainee, Smiligence (Mar 2025 – July 2025)",
       description: `
 Projects: Human Resource Management Portal
@@ -15,14 +15,14 @@ Projects: Human Resource Management Portal
 • Collaborated with business analysts and QA teams to identify, track, and resolve defects during development and UAT phases.
 • Developed and executed basic automation scripts using Selenium WebDriver to streamline repetitive test scenarios, improve regression test coverage, and reduce manual effort.
 • Actively participated in daily stand-up meetings and sprint reviews to align on bug fixes, testing outcomes, and deployment readiness.
-      `
+      `,
     },
   ];
 
   return (
     <section id="experience" className="fs-10">
       <div>
-        <h1 className="text-center heading_color">Experience</h1>
+        <h1 className="text-center heading_color d-flex flex-wrap justify-content-center ">Experience & Certifications</h1>
         <Container className="py-1">
           <Row className="justify-content-between">
             <Col lg={8}>
@@ -53,11 +53,16 @@ Projects: Human Resource Management Portal
             <Col lg={4}>
               <Carousel>
                 {internship.map((item, index) => (
-                  <Carousel.Item key={index}>
+                  <Carousel.Item
+                    key={index}
+                    className="d-flex justify-content-center align-items-center"
+                    style={{ height: "400px" }} // Set your desired height
+                  >
                     <img
                       src={item.imgUrl}
                       alt={item.title}
                       className="img-fluid p-4"
+                      style={{ maxHeight: "100%", objectFit: "contain" }}
                     />
                   </Carousel.Item>
                 ))}
