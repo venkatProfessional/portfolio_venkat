@@ -110,18 +110,18 @@ const Technologies = () => {
     { label: "Pytest", icon: <SiPytest size={100} title="Pytest" /> },
     { label: "TestNG", icon: <SiTestcafe size={100} title="TestNG" /> },
     { label: "Postman", icon: <SiPostman size={100} title="Postman" /> },
-    {
-      label: "CI/CD (Jenkins)",
-      icon: <SiJenkins size={100} title="CI/CD (Jenkins)" />,
-    },
+    // {
+    //   label: "CI/CD (Jenkins)",
+    //   icon: <SiJenkins size={100} title="CI/CD (Jenkins)" />,
+    // },
     { label: "Git", icon: <FaGitAlt size={100} title="Git" /> },
     { label: "GitHub", icon: <FaGithub size={100} title="GitHub" /> },
     {
       label: "Documentation",
       icon: <SiReadthedocs size={100} title="Documentation" />,
     },
-    { label: "JavaScript", icon: <FaJs size={100} title="JavaScript" /> },
-    { label: "JIRA", icon: <SiJira size={100} title="JIRA" /> },
+    // { label: "JavaScript", icon: <FaJs size={100} title="JavaScript" /> },
+    // { label: "JIRA", icon: <SiJira size={100} title="JIRA" /> },
   ];
 
   return (
@@ -182,7 +182,7 @@ const Technologies = () => {
               {/* Skill List */}
               <ul className="row  m-0 p-0  text-center ">
                 {techSkills.map((skill, index) => (
-                  <li key={index} className=" col-sm-6 col-md-4 mb-3">
+                  <li key={index} className=" col-sm-6 col-md-4 mb-3 list-unstyled">
                     {skill.label}
                   </li>
                 ))}
@@ -204,7 +204,7 @@ const Technologies = () => {
               {/* types of testing */}
               <ul className="row  m-0 p-0  text-center ">
                 {typesOfTesting.map((skill, index) => (
-                  <li key={index} className=" col-sm-6 col-md-4 mb-3">
+                  <li key={index} className=" col-sm-6 col-md-4 mb-3 list-unstyled">
                     {skill.label}
                   </li>
                 ))}
