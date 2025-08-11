@@ -17,7 +17,7 @@ const Navs = () => {
   return (
     <Navbar expand="lg" variant="white" className="shadow-none text-white ">
       <Container>
-        <Navbar.Brand href="#">Portfolio</Navbar.Brand>
+        <Navbar.Brand href="#">JV's Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="m-auto">

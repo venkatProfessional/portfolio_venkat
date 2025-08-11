@@ -51,9 +51,9 @@ const ComponentBanner = () => {
                   alt="Light bulb"
                   className="img-fluid"
                   onClick={handleChangelightmode}
-                data-aos="fade-down"
-        data-aos-easing="linear"
-        data-aos-duration="3000"
+        //         data-aos="fade-down"
+        // data-aos-easing="linear"
+        // data-aos-duration="3000"
                   
                 />
                </div>
